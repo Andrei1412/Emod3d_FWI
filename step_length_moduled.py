@@ -1,9 +1,8 @@
-#!/usr/bin/env python2
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python
 """
-Created on Mon Apr 15 13:28:15 2019
+Created on Thu Dec  3 13:40:51 2020
 
-@author: user
+@author: andrei
 """
 
 import numpy as np

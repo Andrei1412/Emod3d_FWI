@@ -1,5 +1,9 @@
 #!/usr/bin/env python
+"""
+Created on Thu Dec  3 13:40:51 2020
 
+@author: andrei
+"""
 import numpy as np
 import os
 import time
