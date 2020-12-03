@@ -103,7 +103,7 @@ for it in range(1, iters + 1):
         os.system('mv %s' % 'ipart.dat ../../../PART' + str(ipart) + '/Kernels/Iters/iter1/')
 
     print('parallel kernel calculation')
-    processes = ('Master_iterations_part_1_multi_taper.py', 'Master_iterations_part_2_multi_taper.py')
+    processes = ('Master_iterations_part_1_moduled.py', 'Master_iterations_part_2_moduled.py')
     pool = Pool(processes=2)
     #    processes = ('Master_iterations_part_1_multi_taper.py', 'Master_iterations_part_2_multi_taper.py','Master_iterations_part_3_multi_taper.py', 'Master_iterations_part_4_multi_taper.py')
     #    pool = Pool(processes=4)

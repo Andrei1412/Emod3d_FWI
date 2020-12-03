@@ -192,7 +192,7 @@ for ishot_id in range(0, len(ishot_arr)):
                 # Remove window less than 30s:
                 if ((windows[0].right - windows[0].left) * dt > 30):
                     e_s_c_name = str(ishot) + '.' + s0 + '.win'
-                    filename = '../../ ALL_WINs_pyflex_temp / ' + e_s_c_name
+                    filename = '../../ALL_WINs_pyflex_temp/' + e_s_c_name
                     # write window
                     write_win_qual(t_max, dt, windows, filename)
                     print(len(windows))
