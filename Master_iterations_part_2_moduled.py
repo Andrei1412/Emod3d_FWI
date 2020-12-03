@@ -69,9 +69,9 @@ for ishot_id in range(0,len(ishot_arr)):
         fi.close() 
         print('isource='+str(ishot))
         #Clean data for current iteration according to event i in the main path:
-        os.system('rm -r '+path_main+'/Kernels/Vel_es/Vel_es_'+str(ishot)+'/*')
-        os.system('rm -r '+path_main+'/Kernels/Iters/iter1/All_shots/GS_shot'+str(ishot)+'.txt')
-        os.system('rm -r '+path_main+'/Kernels/Iters/iter1/All_shots/GP_shot'+str(ishot)+'.txt')
+        #os.system('rm -r '+path_main+'/Kernels/Vel_es/Vel_es_'+str(ishot)+'/*')
+        #os.system('rm -r '+path_main+'/Kernels/Iters/iter1/All_shots/GS_shot'+str(ishot)+'.txt')
+        #os.system('rm -r '+path_main+'/Kernels/Iters/iter1/All_shots/GP_shot'+str(ishot)+'.txt')
         os.system('rm ../../Dev_Strain/*')
         os.system('rm -r ../../../AdjSims/V3.0.7-a2a_xyz/Adj-InputAscii/*')
         #Write e3d.par file from template FWD/e3d_mysource_xyz_default.par for Emod3d: FwdSims/V3.0.7-xyz (forward simulation with waveform and forward strain tensor output)
