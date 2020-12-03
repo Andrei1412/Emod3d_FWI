@@ -50,7 +50,7 @@ ipart=int(ipart)
 
 #Move the script from main running folder Kernels/Iters/iter1/ to the current running folder PARTi/Kernels/Iters/iter1/
 os.system('cp '+path_main+'/Kernels/Iters/iter1/FWT_emod3d_shot_i_part1.sl FWT_emod3d_shot_i_part1.sl')
-os.system('cp '+path_main+'/Kernels/Iters/iter1/e3d_mysource_xyz_default.par.part FWD/e3d_mysource_xyz_default.par')
+os.system('cp '+path_main+'/Kernels/Iters/iter1/e3d_mysource_xyz_default.par.part e3d_mysource_xyz_default.par')
 os.system('cp '+path_main+'/Kernels/Iters/iter1/set_run+merge_params_new_h.csh.part ADJ/set_run+merge_params_new_h.csh')
 os.system('cp '+path_main+'/Kernels/Iters/iter1/FWT_emod3d_shot_i_part2.sl FWT_emod3d_shot_i_part2.sl')
 os.system('cp '+path_main+'/Kernels/Iters/iter1/ascii2adj_ker_iter.csh ../../../AdjSims/V3.0.7-a2a_xyz/ascii2adj_ker_iter.csh')
