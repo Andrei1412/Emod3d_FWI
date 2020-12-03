@@ -1,3 +1,10 @@
+#!/bin/csh
+
+#Submit this script with: sbatch thefilename
+
+#SBATCH --time=0:10:00   # walltime
+###-#SBATCH --nodes=4    # number of nodes (40? cores per node)
+#SBATCH --ntasks=320   # number of processor cores (i.e. tasks)
 #SBATCH --mem-per-cpu=1G   # memory per CPU core
 #SBATCH --error=test.e   # stderr file
 #SBATCH --output=test.o   # stdout file

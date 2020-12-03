@@ -9,10 +9,8 @@ import os
 import time
 from multiprocessing import Pool
 import step_length_moduled
-
-from datetime import datetime
 from jobs_module import job_submitted
-from read_write_module import read_srf_source, read_stat_name
+from read_write_module import read_srf_source, read_stat_name, write_par_source_i
 
 def mkdir_p(dir):
     '''make a directory (dir) if it doesn't exist'''
@@ -21,7 +19,6 @@ def mkdir_p(dir):
 
 def run_process(process):
     os.system('python {}'.format(process))
-
 
 # Main script#############
 iters = 10
@@ -82,7 +79,7 @@ for it in range(1, iters + 1):
         dir_opt = '../../Vel_opt/Vel_ob_' + str(ishot)
         mkdir_p(dir_opt)
 
-    job_file = 'fdrun-mpi_Allshot_opt.sl'
+    job_file = 'fdrun-mpi_Allshot_opt_moduled.sl'
     job_submitted(job_file)
     print('fw emod3d for all sources')
 
@@ -148,7 +145,7 @@ for it in range(1, iters + 1):
         job_submitted(job_file)
         print('forward simulation with perturbed model')
         #Forward simulation according to the updated model to generate synthetic waveform
-        job_file = 'fdrun-mpi_Allshot_opt.sl'
+        job_file = 'fdrun-mpi_Allshot_opt_moduled.sl'
         job_submitted(job_file)
         print('fw emod3d for all sources')
         #Misfit calculation for the current updated model:
@@ -173,7 +170,7 @@ for it in range(1, iters + 1):
         else:
             #Go back to the stepest decent method if L-BFGS steplength does not sastify the update:
             print('Search for optimal step length')
-            opt_step_L2, flag = Step_length_moduled.Step_length(Err, S, nShot, sNames, it)
+            opt_step_L2, flag = step_length_moduled.step_length(Err, S, nShot, sNames, it)
             #opt_step_L2, flag = Step_length_moduled.Step_length_new(Err, S, nShot, sNames, it) #for smaller step length.
     else: #Go back to the stepest decent method if iterations<=2.
         print('Search for optimal step length')

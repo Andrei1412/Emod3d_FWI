@@ -5,7 +5,6 @@
 import numpy as np
 import os
 import time
-
 from jobs_module import job_submitted
 from read_write_module import read_srf_source, write_par_opt_source_i
 
@@ -13,6 +12,7 @@ def mkdir_p(dir):
     '''make a directory (dir) if it doesn't exist'''
     if not os.path.exists(dir):
         os.mkdir(dir)
+
 
 
 #Run for the first itertion only:

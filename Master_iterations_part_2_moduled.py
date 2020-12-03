@@ -6,9 +6,7 @@ Created on Thu Dec  3 13:40:51 2020
 """
 import os
 import numpy as np
-#import os,sys
 import time
-from jobs_module import job_submitted
 from jobs_module import job_submitted
 from read_write_module import read_srf_source, read_stat_name, write_par_source_i
 
