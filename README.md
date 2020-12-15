@@ -11,3 +11,5 @@
 1. Run Master_iterations_OPT_1_slurm_moduled.py to check for forward simulation and the parameter/ source files generated in advance in: Kernels/Iters/iter1/FWD/All_par and  Kernels/Iters/iter1/FWD/All_srf. Check log file in Rlog for more information of each event's forward simulation. Check waveform output at Kernels/Vel_opt/
 
 2. Run Master_INV_pool_moduled.py for iteratively inversion. All itertion data saved in Kernels/Iters/iter1/Dump
+
+Running template: /scale_wlg_nobackup/filesets/nobackup/nesi00213/RunFolder/tdn27/rgraves/NZVMs/Marlborough_Events_4KM/NewVM_20200207/INV_MarlVM_DH_4km_template/Kernels/Iters/iter1/Dump
