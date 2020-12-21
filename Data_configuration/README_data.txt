@@ -1,8 +1,8 @@
-1. Create the station list in cartesian only ("STATION_dh_4km.txt") and in both cartesian, lon/lat ("STATION_utm_dh_4km.txt") tp put in StaInfo:
+1. Create station lists in cartesian only ("STATION_dh_4km.txt") and in both cartesian, lon/lat ("STATION_utm_dh_4km.txt") tp put in StaInfo:
 
 	run create_broadband_station_list_10BB.py
 
-2. Create a event list:
+2. Create an event list:
 
  	a)run select_events_with_CMT_solution_GeoNet_TEMPLATE.py #to have a list of events with given space/ time and Mw conditions
 	b)run constrain_selected_event_geometrically_save_srf_list.py # to constrain the number of events included in the inversion (with most geometrical balance)
